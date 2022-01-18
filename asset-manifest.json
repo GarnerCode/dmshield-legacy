@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/dmshield/static/css/main.f8daffcc.chunk.css",
-    "main.js": "/dmshield/static/js/main.19d25585.chunk.js",
-    "main.js.map": "/dmshield/static/js/main.19d25585.chunk.js.map",
+    "main.js": "/dmshield/static/js/main.dd907c28.chunk.js",
+    "main.js.map": "/dmshield/static/js/main.dd907c28.chunk.js.map",
     "runtime-main.js": "/dmshield/static/js/runtime-main.dec0c4ce.js",
     "runtime-main.js.map": "/dmshield/static/js/runtime-main.dec0c4ce.js.map",
     "static/js/2.6de6d7b8.chunk.js": "/dmshield/static/js/2.6de6d7b8.chunk.js",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.dec0c4ce.js",
     "static/js/2.6de6d7b8.chunk.js",
     "static/css/main.f8daffcc.chunk.css",
-    "static/js/main.19d25585.chunk.js"
+    "static/js/main.dd907c28.chunk.js"
   ]
 }
