@@ -1,0 +1,268 @@
+/*Color Palette*/
+$bgColor: #0d1530;
+$bgSecondary: #050812;
+$textColor: white;
+
+/*Mixins*/
+@mixin boxShadow {
+  box-shadow: 2px 2px 5px black;
+}
+@mixin smoothTrans {
+  transition: all 0.1s ease-in-out;
+}
+@mixin formStyles {
+  color: $textColor;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  display: block;
+  margin: auto auto;
+  margin-top: 1em;
+  resize: none;
+}
+@mixin inputStyles {
+  background-color: $bgSecondary;
+  color: $textColor;
+  border: none;
+  border-radius: 5px;
+}
+
+h1 {
+  font-family: "Bebas Neue", cursive;
+}
+p {
+  font-family: "Rubik", sans-serif;
+}
+hr {
+  border: 0;
+  height: 1px;
+  background: $bgSecondary;
+  background-image: linear-gradient(to right, $bgColor, $bgSecondary, $bgColor);
+}
+
+.App {
+  display: grid;
+  grid-template-columns: 0.3fr 5fr;
+  height: 100vh;
+  max-height: 100vh;
+  color: $textColor;
+  overflow-y: hidden;
+  .Navbar {
+    background-color: $bgSecondary;
+    grid-column: 1/2;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    z-index: 100;
+    box-shadow: 5px 0px 10px black;
+    img {
+      width: 90%;
+      margin: auto auto;
+    }
+    button {
+      @include boxShadow();
+      @include smoothTrans();
+      background-color: $bgColor;
+      display: block;
+      margin: auto auto;
+      font-size: 3em;
+      border: none;
+      border-radius: 5px;
+      padding: 0;
+      width: 80px;
+      color: $textColor;
+      &:hover {
+        transform: scale(120%);
+        p {
+          display: inline;
+        }
+      }
+      i {
+        padding: 10px;
+        text-shadow: 2px 2px 5px black;
+      }
+      p {
+        display: none;
+        font-size: 15px;
+      }
+    }
+  }
+  .Campaign {
+    grid-column: 2/3;
+    display: grid;
+    grid-template-rows: 0.5fr 1fr;
+    overflow-y: hidden;
+    .toggleInput {
+      @include boxShadow();
+      @include smoothTrans();
+      background-color: $bgColor;
+      color: $textColor;
+      border: none;
+      border-radius: 5px;
+      display: block;
+      text-align: center;
+      margin: auto auto;
+      margin-top: 1em;
+      padding: 10px;
+      font-size: 16px;
+      &:hover {
+        transform: scale(120%);
+      }
+    }
+    .campInfo {
+      grid-row: 1/2;
+      h1 {
+        text-align: center;
+        font-size: 60px;
+      }
+      p {
+        text-align: center;
+        display: block;
+        margin: auto auto;
+        font-size: 20px;
+        width: 50%;
+      }
+    }
+    form {
+      grid-row: 1/2;
+      input,
+      textarea {
+        @include boxShadow();
+        @include formStyles();
+        background-color: $bgSecondary;
+        &.inputCampName {
+          text-align: center;
+        }
+        &.campaignSumm {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+  .Sessions {
+    background-color: $bgSecondary;
+    overflow-y: auto;
+    box-shadow: inset 0px 5px 10px black;
+    h1 {
+      text-align: center;
+    }
+    .addSession {
+      @include boxShadow();
+      @include smoothTrans();
+      background-color: $bgColor;
+      color: $textColor;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      padding: 10px;
+      display: block;
+      margin: auto auto;
+      margin-top: 1em;
+      &:hover {
+        transform: scale(120%);
+      }
+    }
+    form {
+      @include formStyles();
+      textarea {
+        background-color: $bgColor;
+      }
+      input {
+        @include smoothTrans();
+        background-color: $bgColor;
+        padding: 10px;
+        &.inputTitle {
+          text-align: center;
+        }
+        &.submit {
+          &:hover {
+            transform: scale(120%);
+          }
+        }
+      }
+    }
+  }
+  .SessionEntry {
+    @include boxShadow();
+    background-color: $bgColor;
+    text-align: justify;
+    width: 50%;
+    display: block;
+    margin: auto auto;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    h1 {
+      text-align: left;
+    }
+    button {
+      @include boxShadow();
+      background-color: $bgColor;
+      display: inline;
+      float: right;
+      clear: both;
+      padding: 10px;
+      border: none;
+      color: $textColor;
+    }
+    hr {
+      color: $bgSecondary;
+    }
+  }
+  .Characters {
+    h1 {
+      text-align: center;
+    }
+    .CharForm {
+      form {
+        .radioContainer {
+          display: block;
+          text-align: center;
+        }
+        .radioBlock {
+          display: inline-block;
+          margin: 1em;
+          label {
+            display: block;
+          }
+        }
+        .textInputContainer {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          font-size: 16px;
+          label {
+            display: block;
+            text-align: center;
+            margin-top: 1em;
+          }
+          input {
+            display: block;
+            margin: auto auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*Media Queries*/
+@media only screen and (max-width: 770px) {
+  .App {
+    grid-template-columns: 1fr;
+    grid-template-rows: 5fr 0.1fr;
+    .Navbar {
+      grid-row: 2/3;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr;
+      img {
+        width: 30%;
+      }
+      button {
+        font-size: 30px;
+      }
+    }
+    .Campaign {
+      grid-column: 1/2;
+      grid-row: 1/2;
+    }
+  }
+}
