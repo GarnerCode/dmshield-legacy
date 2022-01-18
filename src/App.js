@@ -13,9 +13,9 @@ function App() {
       <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Navbar />
         <Routes>
-          <Route path='/' element={<Campaign />} />
-          <Route path='/characters' element={<Characters />} />
-          <Route path='/encounters' element={<Encounters />} />
+          <Route exact path='/' element={<Campaign />} />
+          <Route exact path='/characters' element={<Characters />} />
+          <Route exact path='/encounters' element={<Encounters />} />
         </Routes>
       </BrowserRouter>
     </div>
