@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/dmshield/static/css/main.2f1bdd0e.chunk.css",
-    "main.js": "/dmshield/static/js/main.fe345bc4.chunk.js",
-    "main.js.map": "/dmshield/static/js/main.fe345bc4.chunk.js.map",
+    "main.js": "/dmshield/static/js/main.01b00362.chunk.js",
+    "main.js.map": "/dmshield/static/js/main.01b00362.chunk.js.map",
     "runtime-main.js": "/dmshield/static/js/runtime-main.dec0c4ce.js",
     "runtime-main.js.map": "/dmshield/static/js/runtime-main.dec0c4ce.js.map",
-    "static/js/2.366be933.chunk.js": "/dmshield/static/js/2.366be933.chunk.js",
-    "static/js/2.366be933.chunk.js.map": "/dmshield/static/js/2.366be933.chunk.js.map",
+    "static/js/2.6de6d7b8.chunk.js": "/dmshield/static/js/2.6de6d7b8.chunk.js",
+    "static/js/2.6de6d7b8.chunk.js.map": "/dmshield/static/js/2.6de6d7b8.chunk.js.map",
     "static/js/3.f1e57f14.chunk.js": "/dmshield/static/js/3.f1e57f14.chunk.js",
     "static/js/3.f1e57f14.chunk.js.map": "/dmshield/static/js/3.f1e57f14.chunk.js.map",
     "index.html": "/dmshield/index.html",
     "static/css/main.2f1bdd0e.chunk.css.map": "/dmshield/static/css/main.2f1bdd0e.chunk.css.map",
-    "static/js/2.366be933.chunk.js.LICENSE.txt": "/dmshield/static/js/2.366be933.chunk.js.LICENSE.txt",
+    "static/js/2.6de6d7b8.chunk.js.LICENSE.txt": "/dmshield/static/js/2.6de6d7b8.chunk.js.LICENSE.txt",
     "static/media/logo.8385d9aa.png": "/dmshield/static/media/logo.8385d9aa.png"
   },
   "entrypoints": [
     "static/js/runtime-main.dec0c4ce.js",
-    "static/js/2.366be933.chunk.js",
+    "static/js/2.6de6d7b8.chunk.js",
     "static/css/main.2f1bdd0e.chunk.css",
-    "static/js/main.fe345bc4.chunk.js"
+    "static/js/main.01b00362.chunk.js"
   ]
 }
