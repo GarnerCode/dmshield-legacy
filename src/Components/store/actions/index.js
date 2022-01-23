@@ -1,4 +1,4 @@
-import { actionCreators } from ".."
+/*import { actionCreators } from ".."*/
 
 /*Campaign Actions*/
 export const updateCampName = (value) => {
@@ -41,44 +41,27 @@ export const deleteSession = (target) => {
 }
 
 /*Character Actions*/
-export const addChar = (
-    charName,
-    race,
-    charClass,
-    armorClass,
-    initiative,
-    speed,
-    hitMax,
-    hitDice,
-    profBonus,
-    strength,
-    dexterity,
-    constitution,
-    intelligence,
-    wisdom,
-    charisma,
-    charNotes
-) => {
+export const addChar = (formData) => {
     return (dispatch) => {
         dispatch({
             type: 'addChar',
             id: Math.random(),
-            charName: charName,
-            race: race,
-            charClass: charClass,
-            armorClass: armorClass,
-            initiative: initiative,
-            speed: speed,
-            hitMax: hitMax,
-            hitDice: hitDice,
-            profBonus: profBonus,
-            strength: strength,
-            dexterity: dexterity,
-            constitution: constitution,
-            intelligence: intelligence,
-            wisdom: wisdom,
-            charisma: charisma,
-            charNotes: charNotes
+            charName: formData.charName,
+            race: formData.race,
+            charClass: formData.charClass,
+            armorClass: formData.armorClass,
+            initiative: formData.initiative,
+            speed: formData.speed,
+            hitMax: formData.hitMax,
+            hitDice: formData.hitDice,
+            profBonus: formData.profBonus,
+            strength: formData.strength,
+            dexterity: formData.dexterity,
+            constitution: formData.constitution,
+            intelligence: formData.intelligence,
+            wisdom: formData.wisdom,
+            charisma: formData.charisma,
+            charNotes: formData.charNotes
         })
     }
 }

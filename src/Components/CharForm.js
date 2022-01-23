@@ -59,43 +59,44 @@ export default function CharForm({ handleToggleForm }) {
                     </div>
                     <div className='charInfo'>
                         <label htmlFor="charName">Name</label>
-                        <input onChange={(e) => handleInputChange(e)} type="text" name='charName' />
+                        <input onChange={(e) => handleInputChange(e)} type="text" name='charName' required />
                         <label htmlFor="race">Race</label>
                         <input onChange={(e) => handleInputChange(e)} type="text" name='race' />
                         <label htmlFor="charClass">Class</label>
-                        <input onChange={(e) => handleInputChange(e)} type="text" name='charClass' />
+                        <input onChange={(e) => handleInputChange(e)} type="text" name='charClass' required />
                     </div>
                     <div className='charMisc'>
                         <label htmlFor="armorClass">Armor Class</label>
-                        <input type="number" name='armorClass' />
+                        <input onChange={(e) => handleInputChange(e)} type="number" name='armorClass' required />
                         <label htmlFor="initiative">Initiative</label>
-                        <input type="number" name='initiative' />
+                        <input onChange={(e) => handleInputChange(e)} type="number" name='initiative' required />
                         <label htmlFor="speed">Speed</label>
-                        <input type="number" name='speed' />
+                        <input onChange={(e) => handleInputChange(e)} type="number" name='speed' required />
                         <label htmlFor="profBonus">Proficency Bonus</label>
-                        <input type="number" name='profBonus' />
+                        <input onChange={(e) => handleInputChange(e)} type="number" name='profBonus' required />
                     </div>
                     <div className='charHealth'>
                         <label htmlFor="hitMax">Max Hit Points</label>
-                        <input type="number" name='hitMax' />
+                        <input onChange={(e) => handleInputChange(e)} type="number" name='hitMax' required />
                         <label htmlFor="hitDice">Hit Dice</label>
-                        <input type="text" name='hitDice' />
+                        <input onChange={(e) => handleInputChange(e)} type="text" name='hitDice' required />
                     </div>
                     <div className='charStats'>
                         <label htmlFor="strength">Strength</label>
-                        <input type="number" name='strength' />
+                        <input onChange={(e) => handleInputChange(e)} type="number" name='strength' required />
                         <label htmlFor="dexterity">Dexterity</label>
-                        <input type="number" name='dexterity' />
+                        <input onChange={(e) => handleInputChange(e)} type="number" name='dexterity' required />
                         <label htmlFor="constitution">Constitution</label>
-                        <input type="number" name='constitution' />
+                        <input onChange={(e) => handleInputChange(e)} type="number" name='constitution' required />
                         <label htmlFor="intelligence">Intelligence</label>
-                        <input type="number" name='intelligence' />
+                        <input onChange={(e) => handleInputChange(e)} type="number" name='intelligence' required />
                         <label htmlFor="wisdom">Wisdom</label>
-                        <input type="number" name='wisdom' />
+                        <input onChange={(e) => handleInputChange(e)} type="number" name='wisdom' required />
                         <label htmlFor="charisma">Charisma</label>
-                        <input type="number" name='charisma' />
+                        <input onChange={(e) => handleInputChange(e)} type="number" name='charisma' required />
                     </div>
                     <input type="submit" />
+                    <button onClick={() => handleToggleForm()}>Cancel</button>
                 </div>
             </form>
         </div>

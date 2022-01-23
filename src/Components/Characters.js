@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { useSelector } from 'react-redux';
 import CharForm from './CharForm';
 import CharList from './CharList';
 
