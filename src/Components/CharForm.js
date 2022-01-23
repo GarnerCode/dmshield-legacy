@@ -1,14 +1,14 @@
 import React, { useState } from 'react'
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { actionCreators } from './store/index';
 
 export default function CharForm({ handleToggleForm }) {
 
-    const [formData, updateFormData] = useState({
-        name: '',
+    const defaultFormData = {
+        charName: '',
         race: '',
-        class: '',
+        charClass: '',
         armorClass: '',
         initiative: '',
         speed: '',
@@ -22,7 +22,9 @@ export default function CharForm({ handleToggleForm }) {
         wisdom: '',
         charisma: '',
         charNotes: ''
-    });
+    }
+
+    const [formData, updateFormData] = useState(defaultFormData);
 
     const handleInputChange = (e) => {
         /* Compare input name to key name, update specfic value */
@@ -38,9 +40,9 @@ export default function CharForm({ handleToggleForm }) {
         e.preventDefault();
         addChar(formData);
         handleToggleForm();
+        updateFormData(defaultFormData);
     }
 
-    const characters = useSelector((state) => state.characters);
     const dispatch = useDispatch();
 
     const { addChar, deleteChar } = bindActionCreators(actionCreators, dispatch);
@@ -48,16 +50,6 @@ export default function CharForm({ handleToggleForm }) {
     return (
         <div className='CharForm'>
             <form onSubmit={(e) => handleFormSubmit(e)}>
-                <div className='radioContainer'>
-                    <div className='radioBlock'>
-                        <label htmlFor="pc">PC</label>
-                        <input type="radio" name='charType' value='pc' />
-                    </div>
-                    <div className='radioBlock'>
-                        <label htmlFor="npc">NPC</label>
-                        <input type="radio" name='charType' value='npc' />
-                    </div>
-                </div>
                 <div className='textInputContainer'>
                     <div className='containerLeft'>
 
@@ -66,12 +58,12 @@ export default function CharForm({ handleToggleForm }) {
 
                     </div>
                     <div className='charInfo'>
-                        <label htmlFor="name">Name</label>
-                        <input onChange={(e) => handleInputChange(e)} type="text" name='name' />
+                        <label htmlFor="charName">Name</label>
+                        <input onChange={(e) => handleInputChange(e)} type="text" name='charName' />
                         <label htmlFor="race">Race</label>
                         <input onChange={(e) => handleInputChange(e)} type="text" name='race' />
-                        <label htmlFor="class">Class</label>
-                        <input onChange={(e) => handleInputChange(e)} type="text" name='class' />
+                        <label htmlFor="charClass">Class</label>
+                        <input onChange={(e) => handleInputChange(e)} type="text" name='charClass' />
                     </div>
                     <div className='charMisc'>
                         <label htmlFor="armorClass">Armor Class</label>
@@ -80,6 +72,8 @@ export default function CharForm({ handleToggleForm }) {
                         <input type="number" name='initiative' />
                         <label htmlFor="speed">Speed</label>
                         <input type="number" name='speed' />
+                        <label htmlFor="profBonus">Proficency Bonus</label>
+                        <input type="number" name='profBonus' />
                     </div>
                     <div className='charHealth'>
                         <label htmlFor="hitMax">Max Hit Points</label>

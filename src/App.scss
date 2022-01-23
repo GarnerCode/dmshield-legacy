@@ -1,11 +1,13 @@
 /*Color Palette*/
-$bgColor: #0d1530;
-$bgSecondary: #050812;
-$textColor: white;
+$bgColor: #e6e6e6;
+$bgSecondary: #c9c7c7;
+$bgTertiary: #ff1c3a;
+$textColor: rgb(51, 51, 51);
+$shadow: rgb(121, 120, 120);
 
 /*Mixins*/
 @mixin boxShadow {
-  box-shadow: 2px 2px 5px black;
+  box-shadow: 2px 2px 5px $shadow;
 }
 @mixin smoothTrans {
   transition: all 0.1s ease-in-out;
@@ -48,41 +50,48 @@ hr {
   color: $textColor;
   overflow-y: hidden;
   .Navbar {
-    background-color: $bgSecondary;
+    background-color: $bgTertiary;
     grid-column: 1/2;
     display: grid;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     z-index: 100;
-    box-shadow: 5px 0px 10px black;
+    box-shadow: 5px 0px 10px $shadow;
     img {
       width: 90%;
       margin: auto auto;
     }
-    button {
-      @include boxShadow();
-      @include smoothTrans();
-      background-color: $bgColor;
-      display: block;
+    a {
+      height: 4em;
+      width: 4em;
       margin: auto auto;
-      font-size: 3em;
-      border: none;
-      border-radius: 5px;
-      padding: 0;
-      width: 80px;
-      color: $textColor;
-      &:hover {
-        transform: scale(120%);
-        p {
-          display: inline;
+      button {
+        @include boxShadow();
+        @include smoothTrans();
+        cursor: pointer;
+        background-color: $bgColor;
+        display: block;
+        margin: auto auto;
+        font-size: 2em;
+        border: none;
+        border-radius: 5px;
+        padding: 0;
+        width: 2em;
+        height: 2em;
+        color: $textColor;
+        &:hover {
+          transform: scale(120%);
+          p {
+            display: inline;
+          }
         }
-      }
-      i {
-        padding: 10px;
-        text-shadow: 2px 2px 5px black;
-      }
-      p {
-        display: none;
-        font-size: 15px;
+        i {
+          padding: 10px;
+          text-shadow: 2px 2px 5px $shadow;
+        }
+        p {
+          display: none;
+          font-size: 15px;
+        }
       }
     }
   }
@@ -94,8 +103,9 @@ hr {
     .toggleInput {
       @include boxShadow();
       @include smoothTrans();
-      background-color: $bgColor;
-      color: $textColor;
+      cursor: pointer;
+      background-color: $bgTertiary;
+      color: $bgColor;
       border: none;
       border-radius: 5px;
       display: block;
@@ -141,15 +151,16 @@ hr {
   .Sessions {
     background-color: $bgSecondary;
     overflow-y: auto;
-    box-shadow: inset 0px 5px 10px black;
+    box-shadow: inset 0px 5px 10px $shadow;
     h1 {
       text-align: center;
     }
     .addSession {
       @include boxShadow();
       @include smoothTrans();
-      background-color: $bgColor;
-      color: $textColor;
+      cursor: pointer;
+      background-color: $bgTertiary;
+      color: $bgColor;
       border: none;
       border-radius: 5px;
       font-size: 16px;
@@ -174,9 +185,29 @@ hr {
           text-align: center;
         }
         &.submit {
+          cursor: pointer;
+          background-color: $bgTertiary;
+          color: $bgColor;
           &:hover {
             transform: scale(120%);
           }
+        }
+      }
+      .cancel {
+        cursor: pointer;
+        @include boxShadow();
+        @include smoothTrans();
+        background-color: $bgTertiary;
+        color: $bgColor;
+        display: block;
+        margin: auto auto;
+        margin-top: 1em;
+        border: none;
+        border-radius: 5px;
+        padding: 10px;
+        font-size: 1em;
+        &:hover {
+          transform: scale(120%);
         }
       }
     }
@@ -196,6 +227,9 @@ hr {
     }
     button {
       @include boxShadow();
+      @include smoothTrans();
+      cursor: pointer;
+      border-radius: 5px;
       background-color: $bgColor;
       display: inline;
       float: right;
@@ -203,6 +237,11 @@ hr {
       padding: 10px;
       border: none;
       color: $textColor;
+      &:hover {
+        transform: scale(110%);
+        background-color: $bgTertiary;
+        color: $bgColor;
+      }
     }
     hr {
       color: $bgSecondary;
@@ -211,6 +250,22 @@ hr {
   .Characters {
     h1 {
       text-align: center;
+    }
+    .addChar {
+      @include smoothTrans();
+      cursor: pointer;
+      background-color: $bgTertiary;
+      color: $bgColor;
+      width: 1em;
+      border: none;
+      border-radius: 5px;
+      display: block;
+      margin: auto auto;
+      margin-top: 1em;
+      font-size: 2em;
+      &:hover {
+        transform: scale(120%);
+      }
     }
     .CharForm {
       form {

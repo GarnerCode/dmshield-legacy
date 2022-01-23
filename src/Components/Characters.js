@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
 import CharForm from './CharForm';
-import PCList from './PCList';
-import NPCList from './NPCList';
+import CharList from './CharList';
 
 export default function Characters() {
 
@@ -13,12 +13,10 @@ export default function Characters() {
 
     return (
         <div className='Characters'>
-            {toggleForm ? <CharForm handleToggleForm={handleToggleForm} /> : <button onClick={handleToggleForm}>+</button>}
-            <h1>Player Characters</h1>
-            <PCList />
+            {toggleForm ? <CharForm handleToggleForm={handleToggleForm} /> : <button className='addChar' onClick={handleToggleForm}>+</button>}
+            <h1>Characters</h1>
             <hr />
-            <h1>Non-Player Characters</h1>
-            <NPCList />
+            <CharList />
         </div>
     )
 }

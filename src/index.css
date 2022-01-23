@@ -1,3 +1,4 @@
+/*Color Palette*/
 /*Mixins*/
 h1 {
   font-family: "Bebas Neue", cursive;
@@ -11,8 +12,8 @@ hr {
   border: 0;
   height: 1px;
   background: #050812;
-  background-image: -webkit-gradient(linear, left top, right top, from(#0d1530), color-stop(#050812), to(#0d1530));
-  background-image: linear-gradient(to right, #0d1530, #050812, #0d1530);
+  background-image: -webkit-gradient(linear, left top, right top, from(#e6e6e6), color-stop(#050812), to(#e6e6e6));
+  background-image: linear-gradient(to right, #e6e6e6, #050812, #e6e6e6);
 }
 
 .App {
@@ -22,7 +23,7 @@ hr {
       grid-template-columns: 0.3fr 5fr;
   height: 100vh;
   max-height: 100vh;
-  color: white;
+  color: red;
   overflow-y: hidden;
 }
 
@@ -50,7 +51,7 @@ hr {
           box-shadow: 2px 2px 5px black;
   -webkit-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
-  background-color: #0d1530;
+  background-color: #e6e6e6;
   display: block;
   margin: auto auto;
   font-size: 3em;
@@ -58,7 +59,7 @@ hr {
   border-radius: 5px;
   padding: 0;
   width: 80px;
-  color: white;
+  color: red;
 }
 
 .App .Navbar button:hover {
@@ -96,8 +97,8 @@ hr {
           box-shadow: 2px 2px 5px black;
   -webkit-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
-  background-color: #0d1530;
-  color: white;
+  background-color: #e6e6e6;
+  color: red;
   border: none;
   border-radius: 5px;
   display: block;
@@ -142,7 +143,7 @@ hr {
 .App .Campaign form textarea {
   -webkit-box-shadow: 2px 2px 5px black;
           box-shadow: 2px 2px 5px black;
-  color: white;
+  color: red;
   border: none;
   border-radius: 5px;
   font-size: 16px;
@@ -179,8 +180,8 @@ hr {
           box-shadow: 2px 2px 5px black;
   -webkit-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
-  background-color: #0d1530;
-  color: white;
+  background-color: #e6e6e6;
+  color: red;
   border: none;
   border-radius: 5px;
   font-size: 16px;
@@ -196,7 +197,7 @@ hr {
 }
 
 .App .Sessions form {
-  color: white;
+  color: red;
   border: none;
   border-radius: 5px;
   font-size: 16px;
@@ -207,13 +208,13 @@ hr {
 }
 
 .App .Sessions form textarea {
-  background-color: #0d1530;
+  background-color: #e6e6e6;
 }
 
 .App .Sessions form input {
   -webkit-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
-  background-color: #0d1530;
+  background-color: #e6e6e6;
   padding: 10px;
 }
 
@@ -229,7 +230,7 @@ hr {
 .App .SessionEntry {
   -webkit-box-shadow: 2px 2px 5px black;
           box-shadow: 2px 2px 5px black;
-  background-color: #0d1530;
+  background-color: #e6e6e6;
   text-align: justify;
   width: 50%;
   display: block;
@@ -246,13 +247,13 @@ hr {
 .App .SessionEntry button {
   -webkit-box-shadow: 2px 2px 5px black;
           box-shadow: 2px 2px 5px black;
-  background-color: #0d1530;
+  background-color: #e6e6e6;
   display: inline;
   float: right;
   clear: both;
   padding: 10px;
   border: none;
-  color: white;
+  color: red;
 }
 
 .App .SessionEntry hr {
@@ -330,7 +331,7 @@ hr {
 }
 
 body {
-  background-color: #0d1530;
+  background-color: #e6e6e6;
   margin: 0;
 }
 /*# sourceMappingURL=index.css.map */

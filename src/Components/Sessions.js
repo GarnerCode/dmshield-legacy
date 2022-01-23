@@ -39,20 +39,20 @@ export default function Sessions() {
 
     return (
         <div className='Sessions'>
-        <h1>Session Logs</h1>
-            {toggleAddSession ? 
+            <h1>Session Logs</h1>
+            {toggleAddSession ?
                 <form onSubmit={(e) => handleSubmit(e)}>
                     <input className='inputTitle' onChange={(e) => handleTitleInput(e)} value={titleInput} type="text" />
                     <textarea onChange={(e) => handleTextInput(e)} value={textInput} id="" cols="50" rows="10"></textarea>
                     <input className='submit' type="submit" />
-                    <button onClick={handleToggle}>Cancel</button>
+                    <button className='cancel' onClick={handleToggle}>Cancel</button>
                 </form>
                 :
                 <button className='addSession' onClick={handleToggle}><i className="fas fa-plus"></i></button>
             }
             {sessions.map(session => {
                 return (
-                    <SessionEntry 
+                    <SessionEntry
                         title={session.title}
                         text={session.text}
                         deleteSession={deleteSession}

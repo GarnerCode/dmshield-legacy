@@ -5,9 +5,9 @@ const reducer = (state = [], action) => {
                 ...state,
                 {
                     id: action.id,
-                    name: action.name,
+                    charName: action.charName,
                     race: action.race,
-                    class: action.class,
+                    charClass: action.charClass,
                     armorClass: action.armorClass,
                     initiative: action.initiative,
                     speed: action.speed,
