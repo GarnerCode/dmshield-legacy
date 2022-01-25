@@ -24,7 +24,11 @@ const reducer = (state = [], action) => {
                 }
             ]
         case 'deleteChar':
-            return state.filter(character => character.id !== action.payload)
+            if (window.confirm("Delete character?") == true) {
+                return state.filter(character => character.id !== action.payload);
+            } else {
+                return state;
+            }
         default:
             return state;
     }

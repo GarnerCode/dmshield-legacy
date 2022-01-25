@@ -1,18 +1,24 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { actionCreators } from './store/index';
 import CharEntry from './CharEntry';
 
 export default function CharList() {
 
     const characters = useSelector((state) => state.characters);
+    const dispatch = useDispatch();
+
+    const { deleteChar } = bindActionCreators(actionCreators, dispatch);
 
     return (
-        <div>
+        <div className="CharList">
             {characters.map(character => {
                 return (
                     <CharEntry
                         charName={character.charName}
                         key={character.id}
+                        id={character.id}
                         race={character.race}
                         charClass={character.charClass}
                         armorClass={character.armorClass}
@@ -29,6 +35,7 @@ export default function CharList() {
                         charisma={character.charisma}
                         charNotes={character.charNotes}
                         charData={character}
+                        deleteChar={deleteChar}
                     />
                 )
             })}

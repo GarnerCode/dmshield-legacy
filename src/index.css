@@ -11,9 +11,9 @@ p {
 hr {
   border: 0;
   height: 1px;
-  background: #050812;
-  background-image: -webkit-gradient(linear, left top, right top, from(#e6e6e6), color-stop(#050812), to(#e6e6e6));
-  background-image: linear-gradient(to right, #e6e6e6, #050812, #e6e6e6);
+  background: #c9c7c7;
+  background-image: -webkit-gradient(linear, left top, right top, from(#e6e6e6), color-stop(#c9c7c7), to(#e6e6e6));
+  background-image: linear-gradient(to right, #e6e6e6, #c9c7c7, #e6e6e6);
 }
 
 .App {
@@ -23,12 +23,12 @@ hr {
       grid-template-columns: 0.3fr 5fr;
   height: 100vh;
   max-height: 100vh;
-  color: red;
+  color: #333333;
   overflow-y: hidden;
 }
 
 .App .Navbar {
-  background-color: #050812;
+  background-color: #ff1c3a;
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1/2;
@@ -37,8 +37,8 @@ hr {
   -ms-grid-rows: 1fr 1fr 1fr 1fr;
       grid-template-rows: 1fr 1fr 1fr 1fr;
   z-index: 100;
-  -webkit-box-shadow: 5px 0px 10px black;
-          box-shadow: 5px 0px 10px black;
+  -webkit-box-shadow: 5px 0px 10px #797878;
+          box-shadow: 5px 0px 10px #797878;
 }
 
 .App .Navbar img {
@@ -46,37 +46,45 @@ hr {
   margin: auto auto;
 }
 
-.App .Navbar button {
-  -webkit-box-shadow: 2px 2px 5px black;
-          box-shadow: 2px 2px 5px black;
+.App .Navbar a {
+  height: 4em;
+  width: 4em;
+  margin: auto auto;
+}
+
+.App .Navbar a button {
+  -webkit-box-shadow: 2px 2px 5px #797878;
+          box-shadow: 2px 2px 5px #797878;
   -webkit-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
+  cursor: pointer;
   background-color: #e6e6e6;
   display: block;
   margin: auto auto;
-  font-size: 3em;
+  font-size: 2em;
   border: none;
   border-radius: 5px;
   padding: 0;
-  width: 80px;
-  color: red;
+  width: 2em;
+  height: 2em;
+  color: #333333;
 }
 
-.App .Navbar button:hover {
+.App .Navbar a button:hover {
   -webkit-transform: scale(120%);
           transform: scale(120%);
 }
 
-.App .Navbar button:hover p {
+.App .Navbar a button:hover p {
   display: inline;
 }
 
-.App .Navbar button i {
+.App .Navbar a button i {
   padding: 10px;
-  text-shadow: 2px 2px 5px black;
+  text-shadow: 2px 2px 5px #797878;
 }
 
-.App .Navbar button p {
+.App .Navbar a button p {
   display: none;
   font-size: 15px;
 }
@@ -93,12 +101,13 @@ hr {
 }
 
 .App .Campaign .toggleInput {
-  -webkit-box-shadow: 2px 2px 5px black;
-          box-shadow: 2px 2px 5px black;
+  -webkit-box-shadow: 2px 2px 5px #797878;
+          box-shadow: 2px 2px 5px #797878;
   -webkit-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
-  background-color: #e6e6e6;
-  color: red;
+  cursor: pointer;
+  background-color: #ff1c3a;
+  color: #e6e6e6;
   border: none;
   border-radius: 5px;
   display: block;
@@ -141,9 +150,9 @@ hr {
 
 .App .Campaign form input,
 .App .Campaign form textarea {
-  -webkit-box-shadow: 2px 2px 5px black;
-          box-shadow: 2px 2px 5px black;
-  color: red;
+  -webkit-box-shadow: 2px 2px 5px #797878;
+          box-shadow: 2px 2px 5px #797878;
+  color: #333333;
   border: none;
   border-radius: 5px;
   font-size: 16px;
@@ -151,7 +160,7 @@ hr {
   margin: auto auto;
   margin-top: 1em;
   resize: none;
-  background-color: #050812;
+  background-color: #c9c7c7;
 }
 
 .App .Campaign form input.inputCampName,
@@ -165,10 +174,10 @@ hr {
 }
 
 .App .Sessions {
-  background-color: #050812;
+  background-color: #c9c7c7;
   overflow-y: auto;
-  -webkit-box-shadow: inset 0px 5px 10px black;
-          box-shadow: inset 0px 5px 10px black;
+  -webkit-box-shadow: inset 0px 5px 10px #797878;
+          box-shadow: inset 0px 5px 10px #797878;
 }
 
 .App .Sessions h1 {
@@ -176,12 +185,13 @@ hr {
 }
 
 .App .Sessions .addSession {
-  -webkit-box-shadow: 2px 2px 5px black;
-          box-shadow: 2px 2px 5px black;
+  -webkit-box-shadow: 2px 2px 5px #797878;
+          box-shadow: 2px 2px 5px #797878;
   -webkit-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
-  background-color: #e6e6e6;
-  color: red;
+  cursor: pointer;
+  background-color: #ff1c3a;
+  color: #e6e6e6;
   border: none;
   border-radius: 5px;
   font-size: 16px;
@@ -197,7 +207,7 @@ hr {
 }
 
 .App .Sessions form {
-  color: red;
+  color: #333333;
   border: none;
   border-radius: 5px;
   font-size: 16px;
@@ -222,14 +232,42 @@ hr {
   text-align: center;
 }
 
+.App .Sessions form input.submit {
+  cursor: pointer;
+  background-color: #ff1c3a;
+  color: #e6e6e6;
+}
+
 .App .Sessions form input.submit:hover {
   -webkit-transform: scale(120%);
           transform: scale(120%);
 }
 
+.App .Sessions form .cancel {
+  cursor: pointer;
+  -webkit-box-shadow: 2px 2px 5px #797878;
+          box-shadow: 2px 2px 5px #797878;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  background-color: #ff1c3a;
+  color: #e6e6e6;
+  display: block;
+  margin: auto auto;
+  margin-top: 1em;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 1em;
+}
+
+.App .Sessions form .cancel:hover {
+  -webkit-transform: scale(120%);
+          transform: scale(120%);
+}
+
 .App .SessionEntry {
-  -webkit-box-shadow: 2px 2px 5px black;
-          box-shadow: 2px 2px 5px black;
+  -webkit-box-shadow: 2px 2px 5px #797878;
+          box-shadow: 2px 2px 5px #797878;
   background-color: #e6e6e6;
   text-align: justify;
   width: 50%;
@@ -245,23 +283,54 @@ hr {
 }
 
 .App .SessionEntry button {
-  -webkit-box-shadow: 2px 2px 5px black;
-          box-shadow: 2px 2px 5px black;
+  -webkit-box-shadow: 2px 2px 5px #797878;
+          box-shadow: 2px 2px 5px #797878;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  cursor: pointer;
+  border-radius: 5px;
   background-color: #e6e6e6;
   display: inline;
   float: right;
   clear: both;
   padding: 10px;
   border: none;
-  color: red;
+  color: #333333;
+}
+
+.App .SessionEntry button:hover {
+  -webkit-transform: scale(110%);
+          transform: scale(110%);
+  background-color: #ff1c3a;
+  color: #e6e6e6;
 }
 
 .App .SessionEntry hr {
-  color: #050812;
+  color: #c9c7c7;
 }
 
 .App .Characters h1 {
   text-align: center;
+}
+
+.App .Characters .addChar {
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  cursor: pointer;
+  background-color: #ff1c3a;
+  color: #e6e6e6;
+  width: 1em;
+  border: none;
+  border-radius: 5px;
+  display: block;
+  margin: auto auto;
+  margin-top: 1em;
+  font-size: 2em;
+}
+
+.App .Characters .addChar:hover {
+  -webkit-transform: scale(120%);
+          transform: scale(120%);
 }
 
 .App .Characters .CharForm form .radioContainer {

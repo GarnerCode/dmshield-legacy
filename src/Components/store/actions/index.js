@@ -69,7 +69,7 @@ export const addChar = (formData) => {
 export const deleteChar = (target) => {
     return (dispatch) => {
         dispatch({
-            type: 'deleteSession',
+            type: 'deleteChar',
             payload: target
         })
     }

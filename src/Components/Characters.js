@@ -14,7 +14,6 @@ export default function Characters() {
         <div className='Characters'>
             {toggleForm ? <CharForm handleToggleForm={handleToggleForm} /> : <button className='addChar' onClick={handleToggleForm}>+</button>}
             <h1>Characters</h1>
-            <hr />
             <CharList />
         </div>
     )

@@ -296,6 +296,72 @@ hr {
         }
       }
     }
+    .CharList {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      overflow-y: scroll;
+      background-color: $bgSecondary;
+      .CharEntry {
+        @include boxShadow();
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 0.2fr 0.5fr;
+        background-color: $bgColor;
+        border-radius: 5px;
+        margin: 2em;
+        padding: 3em;
+        header {
+          grid-column: 1/3;
+          grid-row: 1/2;
+          h1, h2 {
+            text-align: left;
+            grid-column: 1/2;
+            margin: 0;
+          }
+        }
+        .profBonus {
+          grid-column: 1/3;
+          text-align: center;
+        }
+        .charMisc {
+          grid-column: 1/2;
+          grid-row: 2/3;
+        }
+        .charHealth {
+          grid-column: 2/3;
+          grid-row: 2/3;
+        }
+        .charStatBlock {
+          grid-row: 3/4;
+        }
+        footer {
+          grid-column: 1/3;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          margin-top: 2em;
+          button {
+            @include boxShadow();
+            @include smoothTrans();
+            cursor: pointer;
+            width: 3em;
+            height: 3em;
+            display: block;
+            margin: auto auto;
+            border: none;
+            border-radius: 5px;
+            background-color: $bgSecondary;
+            &:hover {
+              background-color: $bgColor;
+              transform: scale(120%);
+            }
+            i {
+              font-size: 2em;
+              color: $textColor;
+            }
+          }
+        }
+      }
+    }
   }
 }
 
@@ -318,6 +384,11 @@ hr {
     .Campaign {
       grid-column: 1/2;
       grid-row: 1/2;
+    }
+    .Characters {
+      .CharList {
+        grid-template-columns: 1fr;
+      }
     }
   }
 }
