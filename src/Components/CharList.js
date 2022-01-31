@@ -17,24 +17,23 @@ export default function CharList() {
                 return (
                     <CharEntry
                         charName={character.charName}
-                        key={character.id}
-                        id={character.id}
-                        race={character.race}
+                        key={character.charId}
+                        charId={character.charId}
+                        charLevel={character.charLevel}
+                        charRace={character.charRace}
                         charClass={character.charClass}
-                        armorClass={character.armorClass}
-                        initiative={character.initiative}
-                        speed={character.speed}
-                        hitMax={character.hitMax}
-                        hitDice={character.hitDice}
-                        profBonus={character.profBonus}
-                        strength={character.strength}
-                        dexterity={character.dexterity}
-                        constitution={character.constitution}
-                        intelligence={character.intelligence}
-                        wisdom={character.wisdom}
-                        charisma={character.charisma}
-                        charNotes={character.charNotes}
-                        charData={character}
+                        charAc={character.charAc}
+                        charInit={character.charInit}
+                        charSpeed={character.charSpeed}
+                        charHp={character.charHp}
+                        charHit={character.charHit}
+                        charProf={character.charProf}
+                        charStr={character.charStr}
+                        charDex={character.charDex}
+                        charCon={character.charCon}
+                        charInt={character.charInt}
+                        charWis={character.charWis}
+                        charCha={character.charCha}
                         deleteChar={deleteChar}
                     />
                 )

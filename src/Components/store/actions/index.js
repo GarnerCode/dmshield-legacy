@@ -45,32 +45,42 @@ export const addChar = (formData) => {
     return (dispatch) => {
         dispatch({
             type: 'addChar',
-            id: Math.random(),
+            charId: Math.random(),
             charName: formData.charName,
-            race: formData.race,
+            charLevel: formData.charLevel,
+            charRace: formData.charRace,
             charClass: formData.charClass,
-            armorClass: formData.armorClass,
-            initiative: formData.initiative,
-            speed: formData.speed,
-            hitMax: formData.hitMax,
-            hitDice: formData.hitDice,
-            profBonus: formData.profBonus,
-            strength: formData.strength,
-            dexterity: formData.dexterity,
-            constitution: formData.constitution,
-            intelligence: formData.intelligence,
-            wisdom: formData.wisdom,
-            charisma: formData.charisma,
-            charNotes: formData.charNotes
+            charAc: formData.charAc,
+            charInit: formData.charInit,
+            charSpeed: formData.charSpeed,
+            charHp: formData.charHp,
+            charHit: formData.charHit,
+            charProf: formData.charProf,
+            charStr: formData.charStr,
+            charDex: formData.charDex,
+            charCon: formData.charCon,
+            charInt: formData.charInt,
+            charWis: formData.charWis,
+            charCha: formData.charCha,
         })
     }
 }
 
-export const deleteChar = (target) => {
+export const deleteChar = (charId) => {
     return (dispatch) => {
         dispatch({
             type: 'deleteChar',
-            payload: target
+            payload: charId
+        })
+    }
+}
+
+export const editChar = (values, charId) => {
+    return (dispatch) => {
+        dispatch({
+            type: 'editChar',
+            payload: values,
+            charId: charId
         })
     }
 }

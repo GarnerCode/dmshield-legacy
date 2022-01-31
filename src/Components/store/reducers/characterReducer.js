@@ -4,30 +4,41 @@ const reducer = (state = [], action) => {
             return [
                 ...state,
                 {
-                    id: action.id,
+                    charId: action.charId,
                     charName: action.charName,
-                    race: action.race,
+                    charLevel: action.charLevel,
+                    charRace: action.charRace,
                     charClass: action.charClass,
-                    armorClass: action.armorClass,
-                    initiative: action.initiative,
-                    speed: action.speed,
-                    hitMax: action.hitMax,
-                    hitDice: action.hitDice,
-                    profBonus: action.profBonus,
-                    strength: action.strength,
-                    dexterity: action.dexterity,
-                    constitution: action.constitution,
-                    intelligence: action.intelligence,
-                    wisdom: action.wisdom,
-                    charisma: action.charisma,
-                    charNotes: action.charNotes
+                    charAc: action.charAc,
+                    charInit: action.charInit,
+                    charSpeed: action.charSpeed,
+                    charHp: action.charHp,
+                    charHit: action.charHit,
+                    charProf: action.charProf,
+                    charStr: action.charStr,
+                    charDex: action.charDex,
+                    charCon: action.charCon,
+                    charInt: action.charInt,
+                    charWis: action.charWis,
+                    charCha: action.charCha,
                 }
             ]
         case 'deleteChar':
-            if (window.confirm("Delete character?") == true) {
-                return state.filter(character => character.id !== action.payload);
+            if (window.confirm("Delete character?") === true) {
+                return state.filter(character => character.charId !== action.payload);
             } else {
                 return state;
+            }
+        case 'editChar':
+            console.log('Number of characters: ' + state.length);
+            const charCount = state.length;
+            for (var i = 0; i < charCount; i++) {
+                console.log(state[i]);
+                if (state[i].charId === action.charId) {
+                    state[i] = action.payload;
+                    state[i].charId = Math.random();
+                    return state;
+                }
             }
         default:
             return state;
