@@ -3,7 +3,7 @@
 ## Dungeons & Dragons Campaign Management System
 
 DM Shield is a web-only tool for dungeon masters to store information regarding their campaign. 
-A new cross-platform version is being developed for web, iOS and Android.
+A newer version is under development.
 
 ## Technologies Utilized
 
